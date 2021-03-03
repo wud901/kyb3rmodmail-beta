@@ -26,8 +26,8 @@ class ConfigManager:
         # activity
         "twitch_url": "https://www.twitch.tv/discordmodmail/",
         # bot settings
-        "main_category_id": None,
-        "fallback_category_id": None,
+        "main_category_id": 802980461026476083,
+        "fallback_category_id": 786553733395906580,
         "prefix": "?",
         "mention": "@here",
         "main_color": str(discord.Color.blurple()),
