@@ -343,7 +343,7 @@ class Utility(commands.Cog):
         embed.add_field(
             name="Join Sabbynation Development Team ",
             value="If you would like to join Sabbynation Development Team "
-            "to create cool bots like this [` here is the Application `](https://docs.google.com/forms/d/e/1FAIpQLScHCGq2H9y0lt1Ygt_bvc8biCLWiXPMwjhd3gsdSI6oJvh07g/viewform?usp=sf_link)",
+            "to create cool bots like this [Application](https://docs.google.com/forms/d/e/1FAIpQLScHCGq2H9y0lt1Ygt_bvc8biCLWiXPMwjhd3gsdSI6oJvh07g/viewform?usp=sf_link)",
             inline=False,
         )
 
