@@ -322,8 +322,7 @@ class Utility(commands.Cog):
         embed.add_field(name="Uptime", value=self.bot.uptime)
         embed.add_field(name="Latency", value=f"{self.bot.latency * 1000:.2f} ms")
         embed.add_field(name="Version", value=f"`{self.bot.version}`")
-        embed.add_field(name="Authors", value="`Wud#6969`")
-        embed.add_field(name="Hosting Method", value=self.bot.hosting_method.name)
+        embed.add_field(name="Authors", value="`Wud#6969`, `Kyb3r`")
 
         changelog = await Changelog.from_url(self.bot)
         latest = changelog.latest_version
@@ -341,9 +340,8 @@ class Utility(commands.Cog):
             footer = "You are up to date with the latest version."
 
         embed.add_field(
-            name="Join Sabbynation Development Team ",
-            value="If you would like to join Sabbynation Development Team "
-            "to create cool bots like this [Application](https://docs.google.com/forms/d/e/1FAIpQLScHCGq2H9y0lt1Ygt_bvc8biCLWiXPMwjhd3gsdSI6oJvh07g/viewform?usp=sf_link)",
+            name="Want to create cool bots?",
+            value="[Join](https://docs.google.com/forms/d/e/1FAIpQLScHCGq2H9y0lt1Ygt_bvc8biCLWiXPMwjhd3gsdSI6oJvh07g/viewform?usp=sf_link) the SabbyNation Development Team!",
             inline=False,
         )
 
