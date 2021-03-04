@@ -19,12 +19,8 @@
     <img src="https://api.modmail.dev/badges/instances.svg" alt="Bot instances">
   </a>
 
-  <a href="https://discord.gg/j5e9p8w">
+  <a href="https://discord.gg/4xdwnDst">
     <img src="https://img.shields.io/discord/515071617815019520.svg?label=Discord&logo=Discord&colorB=7289da&style=for-the-badge" alt="Support">
-  </a>
-
-  <a href="https://patreon.com/kyber">
-    <img src="https://img.shields.io/badge/patreon-donate-orange.svg?style=for-the-badge&logo=Patreon" alt="Python 3.7">
   </a>
 
   <a href="https://www.python.org/downloads/">
@@ -35,9 +31,6 @@
     <img src="https://img.shields.io/badge/Code%20Style-Black-black?style=for-the-badge">
   </a>
 
-  <a href="https://github.com/kyb3r/modmail/blob/master/LICENSE">
-    <img src="https://img.shields.io/badge/license-agpl-e74c3c.svg?style=for-the-badge" alt="MIT License">
-  </a>
 
 <br>
 <img src='https://i.imgur.com/fru5Q07.png' align='center' width=500>
@@ -47,8 +40,6 @@
 ## What is Modmail?
 
 Modmail is similar to Reddit's Modmail, both in functionality and purpose. It serves as a shared inbox for server staff to communicate with their users in a seamless way.
-
-This bot is free for everyone and always will be. If you like this project and would like to show your appreciation, you can support us on **[Patreon](https://www.patreon.com/kyber)**, cool benefits included! 
 
 ## How does it work?
 
