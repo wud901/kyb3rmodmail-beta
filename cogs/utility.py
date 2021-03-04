@@ -316,7 +316,7 @@ class Utility(commands.Cog):
         )
         embed.set_thumbnail(url=self.bot.user.avatar_url)
 
-        desc = "SN Support bot is made and maintained by Wud#6969 for SabbyNation."
+        desc = "THis modmail bot is made and maintained by Wud#6969."
         embed.description = desc
 
         embed.add_field(name="Uptime", value=self.bot.uptime)
@@ -339,11 +339,6 @@ class Utility(commands.Cog):
         else:
             footer = "You are up to date with the latest version."
 
-        embed.add_field(
-            name="Want to create cool bots?",
-            value="[Join](https://docs.google.com/forms/d/e/1FAIpQLSfEhh5-PIjkkLvn-9LtzQTZgWMNXIIgRix9dCr9740uknpdEg/viewform?usp=sf_link) the SabbyNation Development Team!",
-            inline=False,
-        )
 
         embed.set_footer(text=footer)
         await ctx.send(embed=embed)
