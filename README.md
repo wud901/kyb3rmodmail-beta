@@ -11,11 +11,11 @@
 
   <br>
   
-  <a href="https://heroku.com/deploy?template=https://github.com/kyb3r/modmail">
+  <a href="https://heroku.com/deploy?template=https://github.com/wud901/kyb3rmodmail-beta">
     <img src="https://img.shields.io/badge/deploy_to-heroku-997FBC.svg?style=for-the-badge&logo=Heroku">
   </a>
 
-  <a href="https://github.com/kyb3r/modmail/">
+  <a href="https://github.com/wud901/kyb3rmodmail-beta">
     <img src="https://api.modmail.dev/badges/instances.svg" alt="Bot instances">
   </a>
 
@@ -110,12 +110,12 @@ If you don't want to go through the trouble of setting up your very own Modmail 
 
 Local hosting of Modmail is also possible. First, you will need [`Python 3.7`](https://www.python.org/downloads/release/python-376/).
 
-Follow the [**installation guide**](https://github.com/kyb3r/modmail/wiki/Installation) and disregard deploying the Heroku bot application. If you run into any problems, join our [Modmail Discord Server](https://discord.gg/etJNHCQ) for help and support.
+Follow the [**installation guide**](https://github.com/wud901/kyb3rmodmail-beta/wiki/Installation) and disregard deploying the Heroku bot application. If you run into any problems, join our [Modmail Discord Server](https://discord.gg/etJNHCQ) for help and support.
 
 Clone the repo:
 
 ```console
-$ git clone https://github.com/kyb3r/modmail
+$ git clone https://github.com/wud901/kyb3rmodmail-beta
 $ cd modmail
 ```
 
