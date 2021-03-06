@@ -287,18 +287,6 @@ class Modmail(commands.Cog):
             embed = create_not_found_embed(name, self.bot.snippets.keys(), "Snippet")
         await ctx.send(embed=embed)
 
-    @commands.command()
-    @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
-    @checks.thread_only()
-    async def suspend(self, ctx, *, arguments):
-        """
-        Suspends a thread so users cannot chat in the thread
-        """
-        await ctx.channel.set_permissions(ctx.guild.default_role, send_messages=False)
-        embed = discord.Embed(
-                title="Thread Suspended",
-                color=self.error_color, 
-
 
     @commands.command(usage="<category> [options]")
     @checks.has_permissions(PermissionLevel.MODERATOR)
