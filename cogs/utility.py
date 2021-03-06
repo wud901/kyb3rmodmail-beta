@@ -316,7 +316,7 @@ class Utility(commands.Cog):
         )
         embed.set_thumbnail(url=self.bot.user.avatar_url)
 
-        desc = "THis modmail bot is made and maintained by Wud#6969."
+        desc = "This modmail bot is made and maintained by Wud#6969."
         embed.description = desc
 
         embed.add_field(name="Uptime", value=self.bot.uptime)
