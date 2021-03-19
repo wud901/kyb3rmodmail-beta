@@ -294,13 +294,9 @@ class Modmail(commands.Cog):
     async def move(self, ctx, *, arguments):
         """
         Move a thread to another category.
-
         `category` may be a category ID, mention, or name.
         `options` is a string which takes in arguments on how to perform the move. Ex: "silently"
         """
-        split_args = arguments.strip('"').split(" ")
-        category = None
-
         # manually parse arguments, consumes as much of args as possible for category
         for i in range(len(split_args)):
             try:
@@ -342,7 +338,11 @@ class Modmail(commands.Cog):
 
         if self.bot.config["thread_move_notify_mods"]:
             mention = self.bot.config["mention"]
-            await thread.channel.send(f"{mention}, thread has been moved.")
+            if mention is not None:
+                msg = f"{mention}, thread has been moved."
+            else:
+                msg = "Thread has been moved."
+            await thread.channel.send(msg)
 
         sent_emoji, _ = await self.bot.retrieve_emoji()
         await self.bot.add_reaction(ctx.message, sent_emoji)
