@@ -312,17 +312,18 @@ class Utility(commands.Cog):
         embed.set_author(
             name="Modmail - About",
             icon_url=self.bot.user.avatar_url,
-            url="https://discord.gg/zKtbfxPshj",
+            url="https://discord.gg/vUVnrdeS",
         )
         embed.set_thumbnail(url=self.bot.user.avatar_url)
 
-        desc = "This modmail bot is made and maintained by Wud#6969."
+        desc = "This is an open source Discord bot made by Kyb3r"
+        desc += "Currently Hosted and Maintained in Vault Services by Wud#6969"
         embed.description = desc
 
         embed.add_field(name="Uptime", value=self.bot.uptime)
         embed.add_field(name="Latency", value=f"{self.bot.latency * 1000:.2f} ms")
         embed.add_field(name="Version", value=f"`{self.bot.version}`")
-        embed.add_field(name="Authors", value="`Wud#6969`, `Kyb3r`")
+        embed.add_field(name="Authors", value="`kyb3r`, `Wud`, `Taki`, `fourjr`")
 
         changelog = await Changelog.from_url(self.bot)
         latest = changelog.latest_version
@@ -338,6 +339,19 @@ class Utility(commands.Cog):
             footer = f"A newer version is available v{latest.version}."
         else:
             footer = "You are up to date with the latest version."
+
+        embed.add_field(
+            name="Want to join our Staff Team?",
+            value="DM <@816553789342613524> to apply for Staff",
+            inline=False,
+        )
+
+        embed.add_field(
+            name="Buy our Services",
+            value="Want a safe and scam free place where you can get cheap services like GFX, custom bots, server building etc?"
+            "If yes then join [Vault Services](https://discord.gg/zKDuTEpEDB) now! for cheap and affordable services. "
+            "So what are you waiting for? Come join [Vault Services](https://discord.gg/zKDuTEpEDB) today and get your any kind of service done!",
+            inline=False,
         )
 
         embed.set_footer(text=footer)
