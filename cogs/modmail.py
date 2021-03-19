@@ -278,7 +278,7 @@ class Modmail(commands.Cog):
             self.bot.snippets[name] = value
             await self.bot.config.update()
 
-           embed = discord.Embed(
+            embed = discord.Embed(
                 title="Edited snippet",
                 color=self.bot.main_color,
                 description=f'`{name}` will now send "{value}".',
