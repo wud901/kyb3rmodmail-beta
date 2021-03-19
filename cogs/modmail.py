@@ -278,7 +278,7 @@ class Modmail(commands.Cog):
             self.bot.snippets[name] = value
             await self.bot.config.update()
 
-            embed = discord.Embed(
+           embed = discord.Embed(
                 title="Edited snippet",
                 color=self.bot.main_color,
                 description=f'`{name}` will now send "{value}".',
@@ -286,7 +286,6 @@ class Modmail(commands.Cog):
         else:
             embed = create_not_found_embed(name, self.bot.snippets.keys(), "Snippet")
         await ctx.send(embed=embed)
-
 
     @commands.command(usage="<category> [options]")
     @checks.has_permissions(PermissionLevel.MODERATOR)
