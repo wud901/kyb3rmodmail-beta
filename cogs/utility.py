@@ -338,7 +338,7 @@ class Utility(commands.Cog):
             footer = f"A newer version is available v{latest.version}."
         else:
             footer = "You are up to date with the latest version."
-
+        )
 
         embed.set_footer(text=footer)
         await ctx.send(embed=embed)
