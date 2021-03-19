@@ -1,12 +1,9 @@
 [
     {
         "embed": {
-            "description": "Bot developer and Chief Financial Officer for Sabbynation!",
+            "title": "Wud#6969",
+            "description": "Hosting and Maintenance for this server, ",
             "color": 15114050,
-            "footer": {
-                "icon_url": "https://cdn.discordapp.com/attachments/793396459352752158/816546805067546645/serverpfpani2.gif",
-                "text": "Chef Financial Officer for Sabbynation"
-            },
             "thumbnail": {
                 "url": "https://cdn.discordapp.com/avatars/398375071942705153/a_357d61793aa72470b9e62798d5b6d493.gif?size=128"
             },
@@ -23,20 +20,51 @@
             ]
         }
     },
-    {
-        "embed": {
-            "title": "Saboteur#0201",
-            "description": "Founder of Sabbynation.",
-            "color": 2968248,
-            "thumbnail": {
-                "url": "https://cdn.discordapp.com/avatars/713735322399277087/a_f9f8f2ddccd34e2488ce96317f0b1ae7.png?size=128"
-            },
-            "fields": [
-                {
-                    "name": "Discord Server!",
-                    "value": "[**Click here**](https://discord.gg/zKtbfxPshj)"
-                }
-            ]
+    [
+        {
+            "embed": {
+                "title": "𝕀𝕝𝕝𝕦𝕞𝕚𝕟𝕒𝕥𝕚#0069",
+                "description": "Owner of Vault Services",
+                "color": 15114050,
+                "thumbnail": {
+                    "url": "https://cdn.discordapp.com/avatars/736177184896581653/38f8ed4efceaab337c87c0dc234b3e4a.png?size=128"
+                },
+                "author": {
+                    "name": "𝕀𝕝𝕝𝕦𝕞𝕚𝕟𝕒𝕥𝕚#0069",
+                    "url": "https://discord.gg/VMqdPsaY",
+                    "icon_url": "https://cdn.discordapp.com/avatars/736177184896581653/38f8ed4efceaab337c87c0dc234b3e4a.png?size=128"
+                },
+                "fields": [
+                    {
+                        "name": "Discord Server!",
+                        "value": "[**Click Here**](https://discord.gg/VMqdPsaY)"
+                    }
+                ]
+            }
         }
-    }
+    ],
+    [
+        {
+            "embed": {
+                "title": "Kyb3r",
+                "description": "Main developer of Discord Modmail, an open source discord bot. I began working on this bot 2 years ago and it has come an extremely long way since then thanks countless hours of work and many contributors, it now boasts a tonne of useful features. ",
+                "color": 2968248,
+                "thumbnail": {
+                    "url": "https://avatars.githubusercontent.com/u/29310830?s=460&u=a32b81b413b8314485383dc4752f949b08b41210&v=4"
+                },
+                "author": {
+                    "name": "Kyb3r",
+                    "url": "discord.gg/etJNHCQ",
+                    "icon_url": "https://avatars.githubusercontent.com/u/29310830?s=460&u=a32b81b413b8314485383dc4752f949b08b41210&v=4"
+                },
+                "fields": [
+                    {
+                        "name": "Discord Server!",
+                        "value": "[**Click Here**](discord.gg/etJNHCQ)"
+                    }
+                ]
+            }
+        }
+    ]
+    
 ]
