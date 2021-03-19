@@ -303,7 +303,7 @@ class Utility(commands.Cog):
                     f"View the changelog here: {changelog.latest_version.changelog_url}#v{version[::2]}"
                 )
 
-    @commands.command(aliases=["info"])
+   @commands.command(aliases=["info"])
     @checks.has_permissions(PermissionLevel.REGULAR)
     @utils.trigger_typing
     async def about(self, ctx):
@@ -316,14 +316,13 @@ class Utility(commands.Cog):
         )
         embed.set_thumbnail(url=self.bot.user.avatar_url)
 
-        desc = "SN Support bot is made and maintained by Wud#6969 for SabbyNation."
+        desc = "This modmail bot is made and maintained by Wud#6969."
         embed.description = desc
 
         embed.add_field(name="Uptime", value=self.bot.uptime)
         embed.add_field(name="Latency", value=f"{self.bot.latency * 1000:.2f} ms")
         embed.add_field(name="Version", value=f"`{self.bot.version}`")
-        embed.add_field(name="Authors", value="`Wud#6969`")
-        embed.add_field(name="Hosting Method", value=self.bot.hosting_method.name)
+        embed.add_field(name="Authors", value="`Wud#6969`, `Kyb3r`")
 
         changelog = await Changelog.from_url(self.bot)
         latest = changelog.latest_version
@@ -339,12 +338,6 @@ class Utility(commands.Cog):
             footer = f"A newer version is available v{latest.version}."
         else:
             footer = "You are up to date with the latest version."
-
-        embed.add_field(
-            name="Join Sabbynation Development Team ",
-            value="If you would like to join Sabbynation Development Team "
-            "to create cool bots like this [` here is the Application `](https://docs.google.com/forms/d/e/1FAIpQLScHCGq2H9y0lt1Ygt_bvc8biCLWiXPMwjhd3gsdSI6oJvh07g/viewform?usp=sf_link)",
-            inline=False,
         )
 
         embed.set_footer(text=footer)
