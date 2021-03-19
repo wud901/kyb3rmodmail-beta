@@ -303,7 +303,7 @@ class Utility(commands.Cog):
                     f"View the changelog here: {changelog.latest_version.changelog_url}#v{version[::2]}"
                 )
 
-   @commands.command(aliases=["info"])
+    @commands.command(aliases=["info"])
     @checks.has_permissions(PermissionLevel.REGULAR)
     @utils.trigger_typing
     async def about(self, ctx):
