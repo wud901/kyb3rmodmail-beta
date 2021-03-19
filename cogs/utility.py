@@ -317,7 +317,7 @@ class Utility(commands.Cog):
         embed.set_thumbnail(url=self.bot.user.avatar_url)
 
         desc = "This is an open source Discord bot made by Kyb3r \n"
-        desc += "Currently Hosted and Maintained in Vault Services by Wud#6969"
+        desc += "**Currently Hosted and Maintained in Vault Services by Wud#6969**"
         embed.description = desc
 
         embed.add_field(name="Uptime", value=self.bot.uptime)
@@ -348,9 +348,8 @@ class Utility(commands.Cog):
 
         embed.add_field(
             name="Buy our Services",
-            value="Want a safe and scam free place where you can get cheap services like GFX, custom bots, server building etc? \n "
-            "If yes then join [Vault Services](https://discord.gg/zKDuTEpEDB) now! for cheap and affordable services. \n  "
-            "So what are you waiting for? Come join [Vault Services](https://discord.gg/zKDuTEpEDB) today and get your any kind of service done!",
+            value="__Want a safe and scam free place where you can get cheap services like GFX, custom bots, server building etc?__ \n "
+            "**If yes then join [Vault Services](https://discord.gg/zKDuTEpEDB) now! for cheap and affordable services.** \n  "
             inline=False,
         )
 
