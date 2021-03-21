@@ -1,32 +1,36 @@
 [
     {
         "embed": {
-            "description": "THis is a Test!",
-            "color": 15114050,
-            "footer": {
-                "icon_url": "https://i.imgur.com/fvNKUks.png",
-                "text": "NAHANAAHAHANAHAN"
-            },
+            "title": "Berkand Karadere",
+            "description": "Berkand Karadere is an German Community Manager who integrated new systems into the game industry. He also is hosting and developing web servers and game servers. He also plays American Football for the Dortmund Giants and his journey has just begun.",
+            "color": 2968248,
             "thumbnail": {
-                "url": "https://i.imgur.com/WyzaPKY.png"
-            },
-            "author": {
-                "name": "BAFDUSMDSJNDKS",
-                "url": "https://www.youtube.com/channel/UCgSmBJD9imASmJRleycTCwQ?sub_confirmation=1",
-                "icon_url": "https://i.imgur.com/WyzaPKY.png"
+                "url": "https://i.imgur.com/cs2QEcp.png"
             },
             "fields": [
                 {
-                    "name": "Subscribe!",
-                    "value": "[**Click Here**](https://www.youtube.com/channel/UCgSmBJD9imASmJRleycTCwQ?sub_confirmation=1)"
-                },
-                {
                     "name": "Discord Server!",
-                    "value": "[**Click Here**](https://discord.gg/V8ErqHb)"
+                    "value": "[**Click here**](https://discord.gg/BanCwptMJV)"
                 }
             ]
         }
-    },
+    }
+    {
+        "embed": {
+            "title": "Berkand Karadere",
+            "description": "Berkand Karadere is an German Community Manager who integrated new systems into the game industry. He also is hosting and developing web servers and game servers. He also plays American Football for the Dortmund Giants and his journey has just begun.",
+            "color": 2968248,
+            "thumbnail": {
+                "url": "https://i.imgur.com/cs2QEcp.png"
+            },
+            "fields": [
+                {
+                    "name": "Discord Server!",
+                    "value": "[**Click here**](https://discord.gg/BanCwptMJV)"
+                }
+            ]
+        }
+    }
     {
         "embed": {
             "title": "Berkand Karadere",
