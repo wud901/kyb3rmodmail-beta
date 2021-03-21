@@ -1,62 +1,46 @@
 [
     {
-        "title": "Wud#6969",
-        "description": "Hosting and Maintenance for this server",
-        "author": {
-          "name": "Wud#6969",
-          "icon_url": "https://cdn.discordapp.com/avatars/398375071942705153/a_357d61793aa72470b9e62798d5b6d493.gif?size=128"
-        },
-        "color": 53380,
-        "thumbnail": "https://cdn.discordapp.com/avatars/398375071942705153/a_357d61793aa72470b9e62798d5b6d493.gif?size=128",
-        "fields": [
-          {
-            "name": "Discord Server",
-            "value": "https://discord.gg/jKv3g7aNdT",
-            "inline": true
-          }
-        ]
+        "embed": {
+            "description": "This is a youtube channel that provides high quality reddit content. Videos are uploaded regularly so you are never out of funny, interesting or even creepy content!",
+            "color": 15114050,
+            "footer": {
+                "icon_url": "https://i.imgur.com/fvNKUks.png",
+                "text": "I am a robot, son of Daniel (UK)"
+            },
+            "thumbnail": {
+                "url": "https://i.imgur.com/WyzaPKY.png"
+            },
+            "author": {
+                "name": "Sir Reddit",
+                "url": "https://www.youtube.com/channel/UCgSmBJD9imASmJRleycTCwQ?sub_confirmation=1",
+                "icon_url": "https://i.imgur.com/WyzaPKY.png"
+            },
+            "fields": [
+                {
+                    "name": "Subscribe!",
+                    "value": "[**Click Here**](https://www.youtube.com/channel/UCgSmBJD9imASmJRleycTCwQ?sub_confirmation=1)"
+                },
+                {
+                    "name": "Discord Server!",
+                    "value": "[**Click Here**](https://discord.gg/V8ErqHb)"
+                }
+            ]
+        }
     },
     {
-        "title": "𝕀𝕝𝕝𝕦𝕞𝕚𝕟𝕒𝕥𝕚#0069",
-        "description": "Hosting and Maintenance for this server",
-        "author": {
-          "name": "𝕀𝕝𝕝𝕦𝕞𝕚𝕟𝕒𝕥𝕚#0069",
-          "url": "https://discord.gg/VMqdPsaY",
-          "icon_url": "https://cdn.discordapp.com/avatars/736177184896581653/38f8ed4efceaab337c87c0dc234b3e4a.png?size=128"
-        },
-        "color": 53380,
-        "thumbnail": "https://cdn.discordapp.com/avatars/736177184896581653/38f8ed4efceaab337c87c0dc234b3e4a.png?size=128",
-        "image": "https://cdn.discordapp.com/attachments/776321692263383050/805382883254468628/ault.gif",
-        "fields": [
-          {
-            "name": "Discord Server",
-            "value": "https://discord.gg/VMqdPsaY",
-            "inline": true
-          },
-          {
-            "name": "Website",
-            "value": "https://blacklilyofkon.wixsite.com/website",
-            "inline": true
-          }
-        ]
-    },
-    {
-        "title": "Kyb3r",
-        "description": "Main developer of Discord Modmail, an open source discord bot. I began working on this bot 2 years ago and it has come an extremely long way since then thanks to countless hours of work and many contributors, it now boasts a tonne of useful features",
-        "author": {
-          "name": "Kyb3r",
-          "url": "https://discord.gg/VMqdPsaYhttps://github.com/kyb3r/modmail",
-          "icon_url": "https://avatars.githubusercontent.com/u/29310830?s=460&u=a32b81b413b8314485383dc4752f949b08b41210&v=4"
-        },
-        "color": 53380,
-        "thumbnail": "https://avatars.githubusercontent.com/u/29310830?s=460&u=a32b81b413b8314485383dc4752f949b08b41210&v=4",
-        "fields": [
-          {
-            "name": "Discord Server",
-            "value": "[**Click Here**](discord.gg/etJNHCQ)",
-            "inline": true
-          }
-        ]
+        "embed": {
+            "title": "Berkand Karadere",
+            "description": "Berkand Karadere is an German Community Manager who integrated new systems into the game industry. He also is hosting and developing web servers and game servers. He also plays American Football for the Dortmund Giants and his journey has just begun.",
+            "color": 2968248,
+            "thumbnail": {
+                "url": "https://i.imgur.com/cs2QEcp.png"
+            },
+            "fields": [
+                {
+                    "name": "Discord Server!",
+                    "value": "[**Click here**](https://discord.gg/BanCwptMJV)"
+                }
+            ]
+        }
     }
-    
 ]
