@@ -362,7 +362,7 @@ class Utility(commands.Cog):
     async def sponsors(self, ctx):
         """Shows a list of sponsors."""
         resp = await self.bot.session.get(
-            "https://github.com/wud901/kyb3rmodmail-beta/blob/master/SPONSORS.json"
+            "https://raw.githubusercontent.com/wud901/kyb3rmodmail-beta/blob/master/SPONSORS.json"
         )
         data = loads(await resp.text())
 
