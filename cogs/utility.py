@@ -350,7 +350,6 @@ class Utility(commands.Cog):
             name="Buy our Services",
             value="__Want a safe and scam free place where you can get cheap services like GFX, custom bots, server building etc?__ \n "
             "**If yes then join [Vault Services](https://discord.gg/zKDuTEpEDB) now! for cheap and affordable services.** \n  "
-            "So what are you waiting for? Come join [Vault Services](https://discord.gg/zKDuTEpEDB) today and get your any kind of service done!",
             inline=False,
         )
 
