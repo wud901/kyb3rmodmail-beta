@@ -1,7 +1,7 @@
 [
         {
         "embed": {
-            "title": "Kyb3r"",
+            "title": "Kyb3r",
             "description": "Main developer of Discord Modmail, an open source discord bot. He began working on this bot 2 years ago and it has come an extremely long way since then thanks to countless hours of work and many contributors, it now boasts a tonne of useful features",
             "color": 2968248,
             "thumbnail": {
@@ -18,8 +18,7 @@
                 }
             ]
         }
-    }
-
+    },
         {
         "embed": {
             "title": "Wud#6969",
