@@ -1,21 +1,21 @@
 [
         {
         "embed": {
-            "title": "Kyb3r",
-            "description": "Main developer of Discord Modmail, an open source discord bot. He began working on this bot 2 years ago and it has come an extremely long way since then thanks to countless hours of work and many contributors, it now boasts a tonne of useful features",
+            "title": "𝕀𝕝𝕝𝕦𝕞𝕚𝕟𝕒𝕥𝕚#0069",
+            "description": "Owner of Vault Services",
             "color": 2968248,
             "thumbnail": {
-                "url": "https://avatars.githubusercontent.com/u/29310830?s=460&u=a32b81b413b8314485383dc4752f949b08b41210&v=4"
+                "url": "https://cdn.discordapp.com/avatars/736177184896581653/38f8ed4efceaab337c87c0dc234b3e4a.png?size=128"
             },
             "fields": [
                 {
                     "name": "Discord Server!",
-                    "value": "[**Click here**](discord.gg/etJNHCQ)"
+                    "value": "[**Click here**](https://discord.gg/VMqdPsaY)"
                 }
             ]
         }
     },
-        {
+    {
         "embed": {
             "title": "Wud#6969",
             "description": "Hosting and Maintenance for this server",
@@ -31,21 +31,20 @@
             ]
         }
     },
-
-        {
+    {
         "embed": {
-            "title": "𝕀𝕝𝕝𝕦𝕞𝕚𝕟𝕒𝕥𝕚#0069",
-            "description": "Owner of Vault Services",
-            "color": 16711892,
+            "title": "Kyb3r",
+            "description": "Main developer of Discord Modmail, an open source discord bot. He began working on this bot 2 years ago and it has come an extremely long way since then thanks to countless hours of work and many contributors, it now boasts a tonne of useful features",
+            "color": 2968248,
             "thumbnail": {
-                "url": "https://cdn.discordapp.com/avatars/736177184896581653/38f8ed4efceaab337c87c0dc234b3e4a.png?size=128"
+                "url": "https://avatars.githubusercontent.com/u/29310830?s=460&u=a32b81b413b8314485383dc4752f949b08b41210&v=4"
             },
             "fields": [
                 {
                     "name": "Discord Server!",
-                    "value": "[**Click here**](https://discord.gg/VMqdPsaY)"
+                    "value": "[**Click here**](discord.gg/etJNHCQ)"
                 }
             ]
         }
-    },
+    }
 ]
