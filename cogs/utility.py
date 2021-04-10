@@ -310,9 +310,9 @@ class Utility(commands.Cog):
         """Shows information about this bot."""
         embed = discord.Embed(color=self.bot.main_color, timestamp=datetime.utcnow())
         embed.set_author(
-            name="Modmail - About",
+            name="Self Advertisements Modmail - About",
             icon_url=self.bot.user.avatar_url,
-            url="https://discord.gg/vUVnrdeS",
+            url="https://discord.gg/txxj5PVJfD",
         )
         embed.set_thumbnail(url=self.bot.user.avatar_url)
 
@@ -342,14 +342,13 @@ class Utility(commands.Cog):
 
         embed.add_field(
             name="Want to join our Staff Team?",
-            value="DM <@816553789342613524> to apply for Staff",
+            value="Check out <#779357549375127652> to apply for Staff",
             inline=False,
         )
 
         embed.add_field(
             name="Buy our Services",
-            value="__Want a safe and scam free place where you can get cheap services like GFX, custom bots, server building etc?__ \n "
-            "**If yes then join [Vault Services](https://discord.gg/zKDuTEpEDB) now! for cheap and affordable services.** \n  ",
+            value="Check out <#784688568311742464> for an easier way to grow your server!",
             inline=False,
         )
 
@@ -359,10 +358,10 @@ class Utility(commands.Cog):
     @commands.command()
     @checks.has_permissions(PermissionLevel.REGULAR)
     @utils.trigger_typing
-    async def sponsors(self, ctx):
-        """Shows a list of sponsors."""
+    async def staff(self, ctx):
+        """Shows a list of staff."""
         resp = await self.bot.session.get(
-            "https://raw.githubusercontent.com/wud901/kyb3rmodmail-beta/master/SPONSORS.json"
+            "https://raw.githubusercontent.com/wud901/kyb3rmodmail-beta/Self-Advertisements/SPONSORS.json"
         )
         data = loads(await resp.text())
 
