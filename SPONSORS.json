@@ -1,24 +1,24 @@
 [
         {
         "embed": {
-            "title": "𝕀𝕝𝕝𝕦𝕞𝕚𝕟𝕒𝕥𝕚#0069",
-            "description": "Owner of Vault Services",
+            "title": "<@678316978896896000> (Basha#0001)",
+            "description": "Owner of Self Advertisements",
             "color": 16711892,
             "thumbnail": {
-                "url": "https://cdn.discordapp.com/avatars/736177184896581653/38f8ed4efceaab337c87c0dc234b3e4a.png?size=128"
+                "url": "https://cdn.discordapp.com/avatars/678316978896896000/a_33029859faa531f96ce5eb919c3ebfbc.gif?size=128?"
             },
             "fields": [
                 {
                     "name": "Discord Server!",
-                    "value": "[**Click here**](https://discord.gg/VMqdPsaY)"
+                    "value": "[**Click here**](https://discord.gg/txxj5PVJfD)"
                 }
             ]
         }
     },
     {
         "embed": {
-            "title": "Wud#6969",
-            "description": "Hosting and Maintenance for this server",
+            "title": "<@398375071942705153> (Wud#6969)",
+            "description": "Chief Operations Officer for Self Adcvertisements; \n Hosting and Mainatinence for this bot",
             "color": 53380,
             "thumbnail": {
                 "url": "https://cdn.discordapp.com/avatars/398375071942705153/a_357d61793aa72470b9e62798d5b6d493.gif?size=128"
@@ -26,9 +26,33 @@
             "fields": [
                 {
                     "name": "Discord Server!",
-                    "value": "[**Click here**](https://discord.gg/jKv3g7aNdT)"
+                    "value": "[**Leviathan**](https://discord.gg/jKv3g7aNdT)"
+                },
+                {
+                    "name": "Discord Server!",
+                    "value": "[**Open Advertisements**](https://discord.gg/mEKdTCWEUg)"
                 }
             ]
+        }
+    },
+    {
+        "embed": {
+            "title": "<@561946181077565444>(Skyla#4287)",
+            "description": "Chief Executive of Self Advertisements",
+            "color": 16711892,
+            "thumbnail": {
+                "url": "https://cdn.discordapp.com/avatars/561946181077565444/a_7d24eeed2dd08533d4a241517cb7de91.gif?size=128"
+            }
+        }
+    },
+    {
+        "embed": {
+            "title": "<@386541204533411841>(Jyzon#0005)",
+            "description": "Co-Owner of Self Advertisements",
+            "color": 16711892,
+            "thumbnail": {
+                "url": "https://cdn.discordapp.com/avatars/386541204533411841/a_17dd5be9f4a822a16fc108416853df99.gif?size=128"
+            }
         }
     },
     {
