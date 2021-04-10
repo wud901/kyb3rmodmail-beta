@@ -400,7 +400,7 @@
                 "sha256:aadae8761ec651813c24be05c6f7b4680857ef6afaae4651a4eccaef97ce6c3b"
             ],
             "index": "pypi",
-            "version": "==3.8.4"
+            "version": "==0.0.1"
         },
         "gitdb": {
             "hashes": [
