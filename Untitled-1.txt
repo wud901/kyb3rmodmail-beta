@@ -1,0 +1,44 @@
+{
+  "username": "Open Advertisements",
+  "avatar_url": "https://imgur.com/6RXlqjJ",
+  "embeds": [
+    {
+      "author": {
+        "name": "Join Now!",
+        "url": "https://discord.gg/gs46TjQY",
+        "icon_url": "https://imgur.com/4NBUrcp"
+      },
+      "title": "Open Advertisements",
+      "url": "https://discord.gg/gs46TjQY",
+      "description": "┎┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┒ \n :o:  **OPEN ADVERTISEMENTS** :red_circle: \n ┖┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┚ \n \n A server that has **revolutionized advertising**, not only will you be able to __advertise your Discord__ and __Social media__, but join the **active** and **friendly community** within the server. \n \n ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁\n **We've got:** \n \n :bellhop: **19,000 Members!** \n \n :abacus: **Multiple**, and __categorized__ advertising channels, including ones for seeking staff, jobs, and advertising your social media or server!\n \n :postbox: An __**extremely active**__ staff team and support system! \n \n :confetti_ball:  Self assignable roles to __manage pings, channels and User Info.__ \n \n :tokyo_tower: **Premium advertising categories and tons of __free and premium__ growth services.** \n \n :pushpin: An extremely **friendly** and **active** public  community! \n \n :nut_and_bolt:  Our very own **Bump bot!**/n /n ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ \n *Join us now, and be apart of the community!*",
+      "color": 15258703,
+      "fields": [
+        {
+          "name": "Members",
+          "value": "19,720",
+          "inline": true
+        },
+        {
+          "name": "Boosts",'
+        
+          "value": "17",
+          "inline": true
+        },
+        {
+          "name": "Bot",
+          "value": "[Open Bumps](https://discord.com/api/oauth2/authorize?client_id=777851498297688065&permissions=347137&scope=bot)",
+          "inline": true
+        },        
+      ],
+      "thumbnail": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/4-Nature-Wallpapers-2014-1_ukaavUI.jpg"
+      },
+      "image": {
+        "url": "https://i.imgur.com/vmSUSsu.png"
+      },
+      "footer": {
+        "text": "Auto Advertisement • Join Now:",
+      }
+    }
+  ]
+}

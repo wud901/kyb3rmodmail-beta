@@ -149,20 +149,6 @@ $ docker run --env-file .env kyb3rr/modmail
 ```
 - `.env` should be the path to your env file; you can also supply a path: `/path/to/.env`.
 
-## Sponsors
-
-Special thanks to our sponsors for supporting the project.
-
-<a href='https://www.youtube.com/channel/UCgSmBJD9imASmJRleycTCwQ/featured'>
-  <img height=150 src='https://i.imgur.com/WyzaPKY.png' style='margin:10px'>
-</a>
-
-<a href='https://discord.gg/BanCwptMJV'>
-  <img height=150 src='https://i.imgur.com/cs2QEcp.png' style='margin:10px'>
-</a>
-
-
-Become a sponsor on [Patreon](https://patreon.com/kyber).
 
 ## Plugins
 
