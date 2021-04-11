@@ -143,7 +143,7 @@ class ConfigManager:
         "enable_plugins": True,
         "enable_eval": True,
         # github access token for private repositories
-        "github_token": "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F,
+        "github_token": "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F",
         "disable_autoupdates": False,
         "disable_updates": False,
         # Logging
