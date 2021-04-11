@@ -317,7 +317,7 @@ class Utility(commands.Cog):
         embed.set_thumbnail(url=self.bot.user.avatar_url)
 
         desc = "This is an open source Discord bot made by Kyb3r \n"
-        desc += "**Currently Hosted and Maintained in Vault Services by Wud#6969**"
+        desc += "**Currently Hosted and Maintained in Self Advertisements by Wud#6969**"
         embed.description = desc
 
         embed.add_field(name="Uptime", value=self.bot.uptime)
@@ -360,6 +360,27 @@ class Utility(commands.Cog):
     @utils.trigger_typing
     async def staff(self, ctx):
         """Shows a list of staff."""
+        resp = await self.bot.session.get(
+            "https://raw.githubusercontent.com/wud901/kyb3rmodmail-beta/Self-Advertisements/SPONSORS.json"
+        )
+        data = loads(await resp.text())
+
+        embeds = []
+
+        for elem in data:
+            embed = discord.Embed.from_dict(elem["embed"])
+            embeds.append(embed)
+
+        random.shuffle(embeds)
+
+        session = EmbedPaginatorSession(ctx, *embeds)
+        await session.run()
+
+    @commands.command()
+    @checks.has_permissions(PermissionLevel.REGULAR)
+    @utils.trigger_typing
+    async def staff(self, ctx):
+        """Shows the Server info"""
         resp = await self.bot.session.get(
             "https://raw.githubusercontent.com/wud901/kyb3rmodmail-beta/Self-Advertisements/SPONSORS.json"
         )
@@ -1163,13 +1184,13 @@ class Utility(commands.Cog):
         levels.
 
         Acceptable permission levels are:
-            - **Owner** [5] (absolute control over the bot)
-            - **Administrator** [4] (administrative powers such as setting activities)
-            - **Moderator** [3] (ability to block)
-            - **Supporter** [2] (access to core Modmail supporting functions)
-            - **Regular** [1] (most basic interactions such as help and about)
+            - **Owner** [5] (Absolute control over the bot) \n `Wud#6969, Basha#0001`
+            - **Administrator** [4] (Administrative Powers, Control over Snippets, Aliases) \n `Management, Operations Management`
+            - **Moderator** [3] (Ability to contact, and view logs) \n `Human resources Team, Team Leaders`
+            - **Supporter** [2] (Access to Modmails) \n `Staff Team`
+            - **Regular** [1] (Most basic interactions such as help and about) \n `Everyone`
 
-        By default, owner is set to the absolute bot owner and regular is `@everyone`.
+        By default, owner is set to Wud#6969 and regular is `@everyone`.
 
         To set permissions, see `{prefix}help permissions add`; and to change permission level for specific
         commands see `{prefix}help permissions override`.
