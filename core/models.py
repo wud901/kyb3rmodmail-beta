@@ -25,8 +25,6 @@ if ".heroku" in os.environ.get("PYTHONHOME", ""):
 class PermissionLevel(IntEnum):
     OWNER = 5
     ADMINISTRATOR = 4
-    MANAGEMENT = 4
-    OPERATIONS = 4
     ADMIN = 4
     MODERATOR = 3
     MOD = 3

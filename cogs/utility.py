@@ -376,27 +376,6 @@ class Utility(commands.Cog):
         session = EmbedPaginatorSession(ctx, *embeds)
         await session.run()
 
-    @commands.command()
-    @checks.has_permissions(PermissionLevel.REGULAR)
-    @utils.trigger_typing
-    async def staff(self, ctx):
-        """Shows the Server info"""
-        resp = await self.bot.session.get(
-            "https://raw.githubusercontent.com/wud901/kyb3rmodmail-beta/Self-Advertisements/SPONSORS.json"
-        )
-        data = loads(await resp.text())
-
-        embeds = []
-
-        for elem in data:
-            embed = discord.Embed.from_dict(elem["embed"])
-            embeds.append(embed)
-
-        random.shuffle(embeds)
-
-        session = EmbedPaginatorSession(ctx, *embeds)
-        await session.run()
-
     @commands.group(invoke_without_command=True)
     @checks.has_permissions(PermissionLevel.OWNER)
     @utils.trigger_typing
