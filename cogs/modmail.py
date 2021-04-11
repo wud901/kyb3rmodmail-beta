@@ -269,7 +269,6 @@ class Modmail(commands.Cog):
     async def snippet_edit(self, ctx, name: str.lower, *, value):
         """
         Edit a snippet.
-
         To edit a multi-word snippet name, use quotes: ```
         {prefix}snippet edit "two word" this is a new two word snippet.
         ```
@@ -286,7 +285,6 @@ class Modmail(commands.Cog):
         else:
             embed = create_not_found_embed(name, self.bot.snippets.keys(), "Snippet")
         await ctx.send(embed=embed)
-
 
     @commands.command(usage="<category> [options]")
     @checks.has_permissions(PermissionLevel.MODERATOR)
