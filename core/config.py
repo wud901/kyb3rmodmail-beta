@@ -88,7 +88,7 @@ class ConfigManager:
         "mod_tag": None,
         # anonymous message
         "anon_username": "Self Advertisements Staff",
-        "anon_avatar_url": https://cdn.discordapp.com/icons/771235990664118272/a_7e1fb100e9ee1a01783f4443ab5f6f18.webp?size=128,
+        "anon_avatar_url": "https://cdn.discordapp.com/icons/771235990664118272/a_7e1fb100e9ee1a01783f4443ab5f6f18.webp?size=128",
         "anon_tag": "Anonymous Response",
         # react to contact
         "react_to_contact_message": None,
@@ -143,13 +143,13 @@ class ConfigManager:
         "enable_plugins": True,
         "enable_eval": True,
         # github access token for private repositories
-        "github_token": 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,
+        "github_token": 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F,
         "disable_autoupdates": False,
         "disable_updates": False,
         # Logging
         "log_level": "INFO",
         # data collection
-        "data_collection": True,
+        "data_collection": False,
     }
 
     colors = {"mod_color", "recipient_color", "main_color", "error_color"}
