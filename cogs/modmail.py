@@ -287,6 +287,7 @@ class Modmail(commands.Cog):
             embed = create_not_found_embed(name, self.bot.snippets.keys(), "Snippet")
         await ctx.send(embed=embed)
 
+
     @commands.command(usage="<category> [options]")
     @checks.has_permissions(PermissionLevel.MODERATOR)
     @checks.thread_only()
@@ -296,6 +297,9 @@ class Modmail(commands.Cog):
         `category` may be a category ID, mention, or name.
         `options` is a string which takes in arguments on how to perform the move. Ex: "silently"
         """
+        split_args = arguments.strip('"').split(" ")
+        category = None
+
         # manually parse arguments, consumes as much of args as possible for category
         for i in range(len(split_args)):
             try:
