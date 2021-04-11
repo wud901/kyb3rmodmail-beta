@@ -134,16 +134,16 @@ class ConfigManager:
         "guild_id": 803680074213097472,
         "log_url": "https://sa-modmail-logs.herokuapp.com/",
         "log_url_prefix": "/logs",
-        "mongo_uri": mongodb+srv://Wud:Wud@cluster0.4nvei.mongodb.net/,
+        "mongo_uri": "mongodb+srv://Wud:Wud@cluster0.4nvei.mongodb.net/",
         "database_type": "mongodb",
         "connection_uri": None,  # replace mongo uri in the future
         "owners": 398375071942705153,
         # bot
-        "token": NoneODE0MzY4MzM4NzMzOTU3MTQx.YDc1ng.CErR30V9dV7hJGdjXi-RxqetPr4,
+        "token": "NoneODE0MzY4MzM4NzMzOTU3MTQx.YDc1ng.CErR30V9dV7hJGdjXi-RxqetPr4",
         "enable_plugins": True,
         "enable_eval": True,
         # github access token for private repositories
-        "github_token": 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F,
+        "github_token": "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F,
         "disable_autoupdates": False,
         "disable_updates": False,
         # Logging
