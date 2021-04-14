@@ -1153,7 +1153,7 @@ class Utility(commands.Cog):
         embed = await self.make_alias(name, value, "Edited")
         return await ctx.send(embed=embed)
 
- @commands.group(aliases=["perms"], invoke_without_command=True)
+    @commands.group(aliases=["perms"], invoke_without_command=True)
     @checks.has_permissions(PermissionLevel.OWNER)
     async def permissions(self, ctx):
         """
