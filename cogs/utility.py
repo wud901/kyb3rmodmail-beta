@@ -1153,27 +1153,22 @@ class Utility(commands.Cog):
         embed = await self.make_alias(name, value, "Edited")
         return await ctx.send(embed=embed)
 
-    @commands.group(aliases=["perms"], invoke_without_command=True)
+ @commands.group(aliases=["perms"], invoke_without_command=True)
     @checks.has_permissions(PermissionLevel.OWNER)
     async def permissions(self, ctx):
         """
         Set the permissions for Modmail commands.
-
         You may set permissions based on individual command names, or permission
         levels.
-
         Acceptable permission levels are:
-            - **Owner** [5] (Absolute control over the bot) \n `Wud#6969, Basha#0001`
-            - **Administrator** [4] (Administrative Powers, Control over Snippets, Aliases) \n `Management, Operations Management`
-            - **Moderator** [3] (Ability to contact, and view logs) \n `Human resources Team, Team Leaders`
-            - **Supporter** [2] (Access to Modmails) \n `Staff Team`
-            - **Regular** [1] (Most basic interactions such as help and about) \n `Everyone`
-
-        By default, owner is set to Wud#6969 and regular is `@everyone`.
-
+            - **Owner** [5] (absolute control over the bot)
+            - **Administrator** [4] (administrative powers such as setting activities)
+            - **Moderator** [3] (ability to block)
+            - **Supporter** [2] (access to core Modmail supporting functions)
+            - **Regular** [1] (most basic interactions such as help and about)
+        By default, owner is set to the absolute bot owner and regular is `@everyone`.
         To set permissions, see `{prefix}help permissions add`; and to change permission level for specific
         commands see `{prefix}help permissions override`.
-
         Note: You will still have to manually give/take permission to the Modmail
         category to users/roles.
         """
@@ -1211,17 +1206,13 @@ class Utility(commands.Cog):
     async def permissions_override(self, ctx, command_name: str.lower, *, level_name: str):
         """
         Change a permission level for a specific command.
-
         Examples:
         - `{prefix}perms override reply administrator`
         - `{prefix}perms override "plugin enabled" moderator`
-
         To undo a permission override, see `{prefix}help permissions remove`.
-
         Example:
         - `{prefix}perms remove override reply`
         - `{prefix}perms remove override plugin enabled`
-
         You can retrieve a single or all command level override(s), see`{prefix}help permissions get`.
         """
 
@@ -1270,16 +1261,13 @@ class Utility(commands.Cog):
     ):
         """
         Add a permission to a command or a permission level.
-
         For sub commands, wrap the complete command name with quotes.
         To find a list of permission levels, see `{prefix}help perms`.
-
         Examples:
         - `{prefix}perms add level REGULAR everyone`
         - `{prefix}perms add command reply @user`
         - `{prefix}perms add command "plugin enabled" @role`
         - `{prefix}perms add command help 984301093849028`
-
         Do not ping `@everyone` for granting permission to everyone, use "everyone" or "all" instead.
         """
 
@@ -1344,10 +1332,8 @@ class Utility(commands.Cog):
     ):
         """
         Remove permission to use a command, permission level, or command level override.
-
         For sub commands, wrap the complete command name with quotes.
         To find a list of permission levels, see `{prefix}help perms`.
-
         Examples:
         - `{prefix}perms remove level REGULAR everyone`
         - `{prefix}perms remove command reply @user`
@@ -1355,7 +1341,6 @@ class Utility(commands.Cog):
         - `{prefix}perms remove command help 984301093849028`
         - `{prefix}perms remove override block`
         - `{prefix}perms remove override "snippet add"`
-
         Do not ping `@everyone` for granting permission to everyone, use "everyone" or "all" instead.
         """
         if type_ not in {"command", "level", "override"} or (
@@ -1476,28 +1461,20 @@ class Utility(commands.Cog):
     ):
         """
         View the currently-set permissions.
-
         To find a list of permission levels, see `{prefix}help perms`.
-
         To view all command and level permissions:
-
         Examples:
         - `{prefix}perms get @user`
         - `{prefix}perms get 984301093849028`
-
         To view all users and roles of a command or level permission:
-
         Examples:
         - `{prefix}perms get command reply`
         - `{prefix}perms get command plugin remove`
         - `{prefix}perms get level SUPPORTER`
-
         To view command level overrides:
-
         Examples:
         - `{prefix}perms get override block`
         - `{prefix}perms get override permissions add`
-
         Do not ping `@everyone` for granting permission to everyone, use "everyone" or "all" instead.
         """
 
@@ -1647,6 +1624,7 @@ class Utility(commands.Cog):
 
         session = EmbedPaginatorSession(ctx, *embeds)
         return await session.run()
+
 
     @commands.group(invoke_without_command=True)
     @checks.has_permissions(PermissionLevel.OWNER)
