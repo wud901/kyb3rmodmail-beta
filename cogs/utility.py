@@ -1625,7 +1625,6 @@ class Utility(commands.Cog):
         session = EmbedPaginatorSession(ctx, *embeds)
         return await session.run()
 
-
     @commands.group(invoke_without_command=True)
     @checks.has_permissions(PermissionLevel.OWNER)
     async def oauth(self, ctx):
