@@ -16,14 +16,11 @@ def has_permissions_predicate(permission_level: PermissionLevel = PermissionLeve
 def has_permissions(permission_level: PermissionLevel = PermissionLevel.REGULAR):
     """
     A decorator that checks if the author has the required permissions.
-
     Parameters
     ----------
-
     permission_level : PermissionLevel
         The lowest level of permission needed to use this command.
         Defaults to REGULAR.
-
     Examples
     --------
     ::
@@ -90,7 +87,6 @@ def thread_only():
         ----------
         ctx : Context
             The current discord.py `Context`.
-
         Returns
         -------
         Bool
