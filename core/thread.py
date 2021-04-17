@@ -105,7 +105,7 @@ class Thread:
 
     async def setup(self, *, creator=None, category=None, initial_message=None):
         """Create the thread channel and other io related initialisation tasks"""
-        self.bot.dispatch("thread_initiate", self, creator, category, initial_message)
+        self.bot.dispatch("thread_initiate", self)
         recipient = self.recipient
 
         # in case it creates a channel outside of category
