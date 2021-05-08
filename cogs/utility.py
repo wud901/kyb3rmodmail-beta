@@ -310,14 +310,14 @@ class Utility(commands.Cog):
         """Shows information about this bot."""
         embed = discord.Embed(color=self.bot.main_color, timestamp=datetime.utcnow())
         embed.set_author(
-            name="Modmail - About",
+            name="Self Advertisements Modmail - About",
             icon_url=self.bot.user.avatar_url,
-            url="https://discord.gg/vUVnrdeS",
+            url="https://discord.gg/txxj5PVJfD",
         )
         embed.set_thumbnail(url=self.bot.user.avatar_url)
 
         desc = "This is an open source Discord bot made by Kyb3r \n"
-        desc += "**Currently Hosted and Maintained in Vault Services by Wud#6969**"
+        desc += "**Currently Hosted and Maintained in Self Advertisements by Wud#6969**"
         embed.description = desc
 
         embed.add_field(name="Uptime", value=self.bot.uptime)
@@ -342,14 +342,13 @@ class Utility(commands.Cog):
 
         embed.add_field(
             name="Want to join our Staff Team?",
-            value="DM <@816553789342613524> to apply for Staff",
+            value="Check out <#779357549375127652> to apply for Staff",
             inline=False,
         )
 
         embed.add_field(
             name="Buy our Services",
-            value="__Want a safe and scam free place where you can get cheap services like GFX, custom bots, server building etc?__ \n "
-            "**If yes then join [Vault Services](https://discord.gg/zKDuTEpEDB) now! for cheap and affordable services.** \n  ",
+            value="Check out <#784688568311742464> for an easier way to grow your server!",
             inline=False,
         )
 
@@ -359,10 +358,10 @@ class Utility(commands.Cog):
     @commands.command()
     @checks.has_permissions(PermissionLevel.REGULAR)
     @utils.trigger_typing
-    async def sponsors(self, ctx):
-        """Shows a list of sponsors."""
+    async def staff(self, ctx):
+        """Shows a list of staff."""
         resp = await self.bot.session.get(
-            "https://raw.githubusercontent.com/wud901/kyb3rmodmail-beta/master/SPONSORS.json"
+            "https://raw.githubusercontent.com/wud901/kyb3rmodmail-beta/Self-Advertisements/SPONSORS.json"
         )
         data = loads(await resp.text())
 
@@ -1074,7 +1073,7 @@ class Utility(commands.Cog):
         return embed
 
     @alias.command(name="add")
-    @checks.has_permissions(PermissionLevel.MODERATOR)
+    @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
     async def alias_add(self, ctx, name: str.lower, *, value):
         """
         Add an alias.
@@ -1159,22 +1158,17 @@ class Utility(commands.Cog):
     async def permissions(self, ctx):
         """
         Set the permissions for Modmail commands.
-
         You may set permissions based on individual command names, or permission
         levels.
-
         Acceptable permission levels are:
             - **Owner** [5] (absolute control over the bot)
             - **Administrator** [4] (administrative powers such as setting activities)
             - **Moderator** [3] (ability to block)
             - **Supporter** [2] (access to core Modmail supporting functions)
             - **Regular** [1] (most basic interactions such as help and about)
-
         By default, owner is set to the absolute bot owner and regular is `@everyone`.
-
         To set permissions, see `{prefix}help permissions add`; and to change permission level for specific
         commands see `{prefix}help permissions override`.
-
         Note: You will still have to manually give/take permission to the Modmail
         category to users/roles.
         """
@@ -1212,17 +1206,13 @@ class Utility(commands.Cog):
     async def permissions_override(self, ctx, command_name: str.lower, *, level_name: str):
         """
         Change a permission level for a specific command.
-
         Examples:
         - `{prefix}perms override reply administrator`
         - `{prefix}perms override "plugin enabled" moderator`
-
         To undo a permission override, see `{prefix}help permissions remove`.
-
         Example:
         - `{prefix}perms remove override reply`
         - `{prefix}perms remove override plugin enabled`
-
         You can retrieve a single or all command level override(s), see`{prefix}help permissions get`.
         """
 
@@ -1271,16 +1261,13 @@ class Utility(commands.Cog):
     ):
         """
         Add a permission to a command or a permission level.
-
         For sub commands, wrap the complete command name with quotes.
         To find a list of permission levels, see `{prefix}help perms`.
-
         Examples:
         - `{prefix}perms add level REGULAR everyone`
         - `{prefix}perms add command reply @user`
         - `{prefix}perms add command "plugin enabled" @role`
         - `{prefix}perms add command help 984301093849028`
-
         Do not ping `@everyone` for granting permission to everyone, use "everyone" or "all" instead.
         """
 
@@ -1345,10 +1332,8 @@ class Utility(commands.Cog):
     ):
         """
         Remove permission to use a command, permission level, or command level override.
-
         For sub commands, wrap the complete command name with quotes.
         To find a list of permission levels, see `{prefix}help perms`.
-
         Examples:
         - `{prefix}perms remove level REGULAR everyone`
         - `{prefix}perms remove command reply @user`
@@ -1356,7 +1341,6 @@ class Utility(commands.Cog):
         - `{prefix}perms remove command help 984301093849028`
         - `{prefix}perms remove override block`
         - `{prefix}perms remove override "snippet add"`
-
         Do not ping `@everyone` for granting permission to everyone, use "everyone" or "all" instead.
         """
         if type_ not in {"command", "level", "override"} or (
@@ -1477,28 +1461,20 @@ class Utility(commands.Cog):
     ):
         """
         View the currently-set permissions.
-
         To find a list of permission levels, see `{prefix}help perms`.
-
         To view all command and level permissions:
-
         Examples:
         - `{prefix}perms get @user`
         - `{prefix}perms get 984301093849028`
-
         To view all users and roles of a command or level permission:
-
         Examples:
         - `{prefix}perms get command reply`
         - `{prefix}perms get command plugin remove`
         - `{prefix}perms get level SUPPORTER`
-
         To view command level overrides:
-
         Examples:
         - `{prefix}perms get override block`
         - `{prefix}perms get override permissions add`
-
         Do not ping `@everyone` for granting permission to everyone, use "everyone" or "all" instead.
         """
 

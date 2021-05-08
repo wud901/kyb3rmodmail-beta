@@ -24,15 +24,15 @@ class ConfigManager:
 
     public_keys = {
         # activity
-        "twitch_url": "https://www.twitch.tv/discordmodmail/",
+        "twitch_url": "https://www.twitch.tv/wud901/",
         # bot settings
-        "main_category_id": None,
-        "fallback_category_id": None,
+        "main_category_id": 817974545809145897,
+        "fallback_category_id": 803683988970930236,
         "prefix": "!",
         "mention": "@here",
         "main_color": str(discord.Color.blurple()),
         "error_color": str(discord.Color.red()),
-        "user_typing": False,
+        "user_typing": True,
         "mod_typing": False,
         "account_age": isodate.Duration(),
         "guild_age": isodate.Duration(),
@@ -41,7 +41,7 @@ class ConfigManager:
         "anon_reply_without_command": False,
         "plain_reply_without_command": False,
         # logging
-        "log_channel_id": None,
+        "log_channel_id": 803691218218909737,
         "mention_channel_id": None,
         "update_channel_id": None,
         # updates
@@ -54,7 +54,7 @@ class ConfigManager:
         "thread_auto_close_silently": False,
         "thread_auto_close": isodate.Duration(),
         "thread_auto_close_response": "This thread has been closed automatically due to inactivity after {timeout}.",
-        "thread_creation_response": "The staff team will get back to you as soon as possible.",
+        "thread_creation_response": "Hey {recipient.mention}! Thank you for contacting__ Self Advertisement ModMail__ bot. \n How can we help you today? ",
         "thread_creation_footer": "Your message has been sent",
         "thread_contact_silently": False,
         "thread_self_closable_creation_footer": "Click the lock to close the thread",
@@ -76,20 +76,20 @@ class ConfigManager:
         "disabled_current_thread_response": "We are not accepting any messages.",
         "disabled_current_thread_footer": "Please try again later...",
         "transfer_reactions": True,
-        "close_on_leave": False,
+        "close_on_leave": True,
         "close_on_leave_reason": "The recipient has left the server.",
         "alert_on_mention": False,
         "silent_alert_on_mention": False,
         "show_timestamp": True,
-        "anonymous_snippets": False,
+        "anonymous_snippets": True,
         # moderation
         "recipient_color": str(discord.Color.gold()),
         "mod_color": str(discord.Color.green()),
         "mod_tag": None,
         # anonymous message
-        "anon_username": None,
-        "anon_avatar_url": None,
-        "anon_tag": "Response",
+        "anon_username": "Self Advertisements Staff",
+        "anon_avatar_url": "https://cdn.discordapp.com/icons/771235990664118272/a_7e1fb100e9ee1a01783f4443ab5f6f18.webp?size=128",
+        "anon_tag": "Anonymous Response",
         # react to contact
         "react_to_contact_message": None,
         "react_to_contact_emoji": "\u2705",
@@ -130,26 +130,26 @@ class ConfigManager:
 
     protected_keys = {
         # Modmail
-        "modmail_guild_id": None,
-        "guild_id": None,
-        "log_url": "https://example.com/",
+        "modmail_guild_id": 771235990664118272,
+        "guild_id": 803680074213097472,
+        "log_url": "https://sa-modmail-logs.herokuapp.com/",
         "log_url_prefix": "/logs",
-        "mongo_uri": None,
+        "mongo_uri": "mongodb+srv://Wud:Wud@cluster0.4nvei.mongodb.net/",
         "database_type": "mongodb",
         "connection_uri": None,  # replace mongo uri in the future
-        "owners": None,
+        "owners": 398375071942705153,
         # bot
-        "token": None,
+        "token": "NoneODE0MzY4MzM4NzMzOTU3MTQx.YDc1ng.CErR30V9dV7hJGdjXi-RxqetPr4",
         "enable_plugins": True,
         "enable_eval": True,
         # github access token for private repositories
-        "github_token": None,
+        "github_token": "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F",
         "disable_autoupdates": False,
         "disable_updates": False,
         # Logging
         "log_level": "INFO",
         # data collection
-        "data_collection": True,
+        "data_collection": False,
     }
 
     colors = {"mod_color", "recipient_color", "main_color", "error_color"}

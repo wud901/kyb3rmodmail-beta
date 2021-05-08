@@ -1,5 +1,4 @@
 import asyncio
-from operator import truediv
 import re
 from datetime import datetime
 from itertools import zip_longest
@@ -37,7 +36,6 @@ class Modmail(commands.Cog):
     async def setup(self, ctx):
         """
         Sets up a server for Modmail.
-
         You only need to run this command
         once after configuring Modmail.
         """
@@ -131,22 +129,17 @@ class Modmail(commands.Cog):
     async def snippet(self, ctx, *, name: str.lower = None):
         """
         Create pre-defined messages for use in threads.
-
         When `{prefix}snippet` is used by itself, this will retrieve
         a list of snippets that are currently set. `{prefix}snippet-name` will show what the
         snippet point to.
-
         To create a snippet:
         - `{prefix}snippet add snippet-name A pre-defined text.`
-
         You can use your snippet in a thread channel
         with `{prefix}snippet-name`, the message "A pre-defined text."
         will be sent to the recipient.
-
         Currently, there is not a built-in anonymous snippet command; however, a workaround
         is available using `{prefix}alias`. Here is how:
         - `{prefix}alias add snippet-name anonreply A pre-defined anonymous text.`
-
         See also `{prefix}alias`.
         """
 
@@ -199,16 +192,14 @@ class Modmail(commands.Cog):
         return await ctx.send(embed=embed)
 
     @snippet.command(name="add")
-    @checks.has_permissions(PermissionLevel.SUPPORTER)
+    @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
     async def snippet_add(self, ctx, name: str.lower, *, value: commands.clean_content):
         """
         Add a snippet.
-
         Simply to add a snippet, do: ```
         {prefix}snippet add hey hello there :)
         ```
         then when you type `{prefix}hey`, "hello there :)" will get sent to the recipient.
-
         To add a multi-word snippet name, use quotes: ```
         {prefix}snippet add "two word" this is a two word snippet.
         ```
@@ -269,7 +260,6 @@ class Modmail(commands.Cog):
     async def snippet_edit(self, ctx, name: str.lower, *, value):
         """
         Edit a snippet.
-
         To edit a multi-word snippet name, use quotes: ```
         {prefix}snippet edit "two word" this is a new two word snippet.
         ```
@@ -296,6 +286,9 @@ class Modmail(commands.Cog):
         `category` may be a category ID, mention, or name.
         `options` is a string which takes in arguments on how to perform the move. Ex: "silently"
         """
+        split_args = arguments.strip('"').split(" ")
+        category = None
+
         # manually parse arguments, consumes as much of args as possible for category
         for i in range(len(split_args)):
             try:
@@ -371,19 +364,15 @@ class Modmail(commands.Cog):
     async def close(self, ctx, *, after: UserFriendlyTime = None):
         """
         Close the current thread.
-
         Close after a period of time:
         - `{prefix}close in 5 hours`
         - `{prefix}close 2m30s`
-
         Custom close messages:
         - `{prefix}close 2 hours The issue has been resolved.`
         - `{prefix}close We will contact you once we find out more.`
-
         Silently close a thread (no message)
         - `{prefix}close silently`
         - `{prefix}close in 10m silently`
-
         Stop a thread from closing:
         - `{prefix}close cancel`
         """
@@ -436,9 +425,7 @@ class Modmail(commands.Cog):
     ):
         """
         Notify a user or role when the next thread message received.
-
         Once a thread message is received, `user_or_role` will be pinged once.
-
         Leave `user_or_role` empty to notify yourself.
         `@here` and `@everyone` can be substituted with `here` and `everyone`.
         `user_or_role` may be a user ID, mention, name. role ID, mention, name, "everyone", or "here".
@@ -476,7 +463,6 @@ class Modmail(commands.Cog):
     ):
         """
         Un-notify a user, role, or yourself from a thread.
-
         Leave `user_or_role` empty to un-notify yourself.
         `@here` and `@everyone` can be substituted with `here` and `everyone`.
         `user_or_role` may be a user ID, mention, name, role ID, mention, name, "everyone", or "here".
@@ -513,9 +499,7 @@ class Modmail(commands.Cog):
     ):
         """
         Notify a user, role, or yourself for every thread message received.
-
         You will be pinged for every thread message received until you unsubscribe.
-
         Leave `user_or_role` empty to subscribe yourself.
         `@here` and `@everyone` can be substituted with `here` and `everyone`.
         `user_or_role` may be a user ID, mention, name, role ID, mention, name, "everyone", or "here".
@@ -553,7 +537,6 @@ class Modmail(commands.Cog):
     ):
         """
         Unsubscribe a user, role, or yourself from a thread.
-
         Leave `user_or_role` empty to unsubscribe yourself.
         `@here` and `@everyone` can be substituted with `here` and `everyone`.
         `user_or_role` may be a user ID, mention, name, role ID, mention, name, "everyone", or "here".
@@ -600,6 +583,21 @@ class Modmail(commands.Cog):
         await ctx.channel.edit(nsfw=False)
         sent_emoji, _ = await self.bot.retrieve_emoji()
         await self.bot.add_reaction(ctx.message, sent_emoji)
+
+    @commands.command()
+    @checks.has_permissions(PermissionLevel.SUPPORTER)
+    @checks.thread_only()
+    async def msglink(self, ctx, message_id: int):
+        """Retrieves the link to a message in the current thread."""
+        try:
+            message = await ctx.thread.recipient.fetch_message(message_id)
+        except discord.NotFound:
+            embed = discord.Embed(
+                color=self.bot.error_color, description="Message not found or no longer exists."
+            )
+        else:
+            embed = discord.Embed(color=self.bot.main_color, description=message.jump_url)
+        await ctx.send(embed=embed)
 
     @commands.command()
     @checks.has_permissions(PermissionLevel.SUPPORTER)
@@ -668,7 +666,6 @@ class Modmail(commands.Cog):
     async def logs(self, ctx, *, user: User = None):
         """
         Get previous Modmail thread logs of a member.
-
         Leave `user` blank when this command is used within a
         thread channel to show logs for the current recipient.
         `user` may be a user ID, mention, or name.
@@ -706,7 +703,6 @@ class Modmail(commands.Cog):
     async def logs_closed_by(self, ctx, *, user: User = None):
         """
         Get all logs closed by the specified user.
-
         If no `user` is provided, the user will be the person who sent this command.
         `user` may be a user ID, mention, or name.
         """
@@ -755,7 +751,6 @@ class Modmail(commands.Cog):
     async def logs_responded(self, ctx, *, user: User = None):
         """
         Get all logs where the specified user has responded at least once.
-
         If no `user` is provided, the user will be the person who sent this command.
         `user` may be a user ID, mention, or name.
         """
@@ -780,7 +775,6 @@ class Modmail(commands.Cog):
     async def logs_search(self, ctx, limit: Optional[int] = None, *, query):
         """
         Retrieve all logs that contain messages with your query.
-
         Provide a `limit` to specify the maximum number of logs the bot should find.
         """
 
@@ -806,7 +800,6 @@ class Modmail(commands.Cog):
     async def reply(self, ctx, *, msg: str = ""):
         """
         Reply to a Modmail thread.
-
         Supports attachments and images as well as
         automatically embedding image URLs.
         """
@@ -820,12 +813,10 @@ class Modmail(commands.Cog):
     async def freply(self, ctx, *, msg: str = ""):
         """
         Reply to a Modmail thread with variables.
-
         Works just like `{prefix}reply`, however with the addition of three variables:
           - `{{channel}}` - the `discord.TextChannel` object
           - `{{recipient}}` - the `discord.User` object of the recipient
           - `{{author}}` - the `discord.User` object of the author
-
         Supports attachments and images as well as
         automatically embedding image URLs.
         """
@@ -842,12 +833,10 @@ class Modmail(commands.Cog):
     async def fareply(self, ctx, *, msg: str = ""):
         """
         Anonymously reply to a Modmail thread with variables.
-
         Works just like `{prefix}areply`, however with the addition of three variables:
           - `{{channel}}` - the `discord.TextChannel` object
           - `{{recipient}}` - the `discord.User` object of the recipient
           - `{{author}}` - the `discord.User` object of the author
-
         Supports attachments and images as well as
         automatically embedding image URLs.
         """
@@ -864,10 +853,8 @@ class Modmail(commands.Cog):
     async def areply(self, ctx, *, msg: str = ""):
         """
         Reply to a thread anonymously.
-
         You can edit the anonymous user's name,
         avatar and tag using the config command.
-
         Edit the `anon_username`, `anon_avatar_url`
         and `anon_tag` config variables to do so.
         """
@@ -881,7 +868,6 @@ class Modmail(commands.Cog):
     async def preply(self, ctx, *, msg: str = ""):
         """
         Reply to a Modmail thread with a plain message.
-
         Supports attachments and images as well as
         automatically embedding image URLs.
         """
@@ -895,7 +881,6 @@ class Modmail(commands.Cog):
     async def pareply(self, ctx, *, msg: str = ""):
         """
         Reply to a Modmail thread with a plain message and anonymously.
-
         Supports attachments and images as well as
         automatically embedding image URLs.
         """
@@ -909,7 +894,6 @@ class Modmail(commands.Cog):
     async def note(self, ctx, *, msg: str = ""):
         """
         Take a note about the current thread.
-
         Useful for noting context.
         """
         ctx.message.content = msg
@@ -938,10 +922,8 @@ class Modmail(commands.Cog):
     async def edit(self, ctx, message_id: Optional[int] = None, *, message: str):
         """
         Edit a message that was sent using the reply or anonreply command.
-
         If no `message_id` is provided,
         the last message sent by a staff will be edited.
-
         Note: attachments **cannot** be edited.
         """
         thread = ctx.thread
@@ -978,10 +960,8 @@ class Modmail(commands.Cog):
     ):
         """
         Create a thread with a specified member.
-
         If `category` is specified, the thread
         will be created in that specified category.
-
         `category`, if specified, may be a category ID, mention, or name.
         `user` may be a user ID, mention, or name.
         `options` can be `silent`
@@ -1008,7 +988,15 @@ class Modmail(commands.Cog):
             await ctx.channel.send(embed=embed, delete_after=3)
 
         else:
-            thread = await self.bot.threads.create(user, creator=ctx.author, category=category)
+            thread = await self.bot.threads.create(
+                recipient=user,
+                creator=ctx.author,
+                category=category,
+                manual_trigger=manual_trigger,
+            )
+            if thread.cancelled:
+                return
+
             if self.bot.config["dm_disabled"] in (DMDisabled.NEW_THREADS, DMDisabled.ALL_THREADS):
                 logger.info("Contacting user %s when Modmail DM is disabled.", user)
 
@@ -1158,7 +1146,6 @@ class Modmail(commands.Cog):
     async def blocked_whitelist(self, ctx, *, user: User = None):
         """
         Whitelist or un-whitelist a user from getting blocked.
-
         Useful for preventing users from getting blocked by account_age/guild_age restrictions.
         """
         if user is None:
@@ -1219,9 +1206,7 @@ class Modmail(commands.Cog):
     ):
         """
         Block a user or role from using Modmail.
-
         You may choose to set a time as to when the user will automatically be unblocked.
-
         Leave `user` blank when this command is used within a
         thread channel to block the current recipient.
         `user` may be a user ID, mention, or name.
@@ -1299,7 +1284,6 @@ class Modmail(commands.Cog):
     async def unblock(self, ctx, *, user_or_role: Union[User, Role] = None):
         """
         Unblock a user from using Modmail.
-
         Leave `user` blank when this command is used within a
         thread channel to unblock the current recipient.
         `user` may be a user ID, mention, or name.
@@ -1368,10 +1352,8 @@ class Modmail(commands.Cog):
     async def delete(self, ctx, message_id: int = None):
         """
         Delete a message that was sent using the reply command or a note.
-
         Deletes the previous message, unless a message ID is provided,
         which in that case, deletes the message with that message ID.
-
         Notes can only be deleted when a note ID is provided.
         """
         thread = ctx.thread
@@ -1463,9 +1445,7 @@ class Modmail(commands.Cog):
             )
             if len(users) == 1:
                 user = users.pop()
-                name = format_channel_name(
-                    user, self.bot.modmail_guild, exclude_channel=ctx.channel
-                )
+                name = format_channel_name(self.bot, user, exclude_channel=ctx.channel)
                 recipient = self.bot.get_user(user.id)
                 if user.id in self.bot.threads.cache:
                     thread = self.bot.threads.cache[user.id]
@@ -1507,7 +1487,6 @@ class Modmail(commands.Cog):
     async def enable(self, ctx):
         """
         Re-enables DM functionalities of Modmail.
-
         Undo's the `{prefix}disable` command, all DM will be relayed after running this command.
         """
         embed = discord.Embed(
@@ -1527,7 +1506,6 @@ class Modmail(commands.Cog):
     async def disable(self, ctx):
         """
         Disable partial or full Modmail thread functions.
-
         To stop all new threads from being created, do `{prefix}disable new`.
         To stop all existing threads from DMing Modmail, do `{prefix}disable all`.
         To check if the DM function for Modmail is enabled, do `{prefix}isenable`.
@@ -1539,7 +1517,6 @@ class Modmail(commands.Cog):
     async def disable_new(self, ctx):
         """
         Stop accepting new Modmail threads.
-
         No new threads can be created through DM.
         """
         embed = discord.Embed(
@@ -1558,7 +1535,6 @@ class Modmail(commands.Cog):
     async def disable_all(self, ctx):
         """
         Disables all DM functionalities of Modmail.
-
         No new threads can be created through DM nor no further DM messages will be relayed.
         """
         embed = discord.Embed(
