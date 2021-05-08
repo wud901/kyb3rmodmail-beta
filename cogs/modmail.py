@@ -125,7 +125,7 @@ class Modmail(commands.Cog):
                 await self.bot.update_perms(PermissionLevel.OWNER, owner_id)
 
     @commands.group(aliases=["snippets"], invoke_without_command=True)
-    @checks.has_permissions(PermissionLevel.SUPPORTER)
+    @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
     async def snippet(self, ctx, *, name: str.lower = None):
         """
         Create pre-defined messages for use in threads.
@@ -192,7 +192,7 @@ class Modmail(commands.Cog):
         return await ctx.send(embed=embed)
 
     @snippet.command(name="add")
-    @checks.has_permissions(PermissionLevel.SUPPORTER)
+    @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
     async def snippet_add(self, ctx, name: str.lower, *, value: commands.clean_content):
         """
         Add a snippet.
