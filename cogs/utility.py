@@ -1073,7 +1073,7 @@ class Utility(commands.Cog):
         return embed
 
     @alias.command(name="add")
-    @checks.has_permissions(PermissionLevel.MODERATOR)
+    @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
     async def alias_add(self, ctx, name: str.lower, *, value):
         """
         Add an alias.
